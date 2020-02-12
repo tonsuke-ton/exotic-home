@@ -1,12 +1,13 @@
 .header
-  %a{:href => "/"}
-    .header-logo
-      デグーのきもち
+  .header-logo
+    = link_to("デグーのきもち","/")
   %ul.header-menus
     %li
-      %a{:href => "/about"}
-        .header-menus__about
-          デグーのきもちとは
+      .header-menus__about
+        = link_to("デグーのきもちとは","/about")
+    %li
+      .header-menus__posts
+        = link_to("投稿一覧","/posts/index")
 
 .about-main
   %h2 デグーのきもちとは。
