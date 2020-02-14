@@ -8,4 +8,17 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     
   %body
-    = yield
+  .header
+    .header-logo
+      = link_to("デグーのきもち","/")
+    %ul.header-menus
+      %li
+        .header-menus__about
+          = link_to("デグーのきもちとは","/about")
+      %li
+        .header-menus__posts
+          = link_to("投稿一覧","/posts/index")
+      %li
+        .header-menus__new
+          = link_to("新規投稿","/posts/new")
+= yield 
