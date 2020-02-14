@@ -1,11 +1,5 @@
-.header
-  %a{:href => "/"}
-    .header-logo
-      デグーのきもち
-  %ul.header-menus
-    %li
-      %a{:href => "/about"}
-        .header-menus__about
-          デグーのきもちとは
-
-.main posts-index
+.posts-index
+  .container
+    - @posts.each do |post|
+      .posts-index__item
+      = link_to(post.content,"/posts/#{post.id}")
