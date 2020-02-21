@@ -8,6 +8,7 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     
   %body
+  = render 'layouts/notifications'
   .header
     .header-logo
       = link_to("デグーのきもち","/")
@@ -24,4 +25,5 @@
       %li
         = link_to("新規登録", "/signup") 
         
-= yield 
+  
+  = yield 
