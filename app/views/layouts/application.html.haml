@@ -19,7 +19,7 @@
         %li
           = link_to("新規投稿","/posts/new")
         %li
-        ログイン中
+          = link_to("ログアウト", "/logout", {method: :post}) 
       -else        
         %li
           = link_to("デグーのきもちとは","/about")
