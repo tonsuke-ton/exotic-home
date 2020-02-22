@@ -13,17 +13,18 @@
     .header-logo
       = link_to("デグーのきもち","/")
     %ul.header-menus
-      %li
-        .header-menus__about
-        = link_to("デグーのきもちとは","/about")
-      %li
-        .header-menus__posts
-        = link_to("質問一覧","/posts/index")
-      %li
-        .header-menus__new
-        = link_to("新規投稿","/posts/new")
-      %li
-        = link_to("新規登録", "/signup") 
-        
-  
+      -if session[:user_id]
+        %li
+          = link_to("質問一覧","/posts/index")
+        %li
+          = link_to("新規投稿","/posts/new")
+        %li
+        ログイン中
+      -else        
+        %li
+          = link_to("デグーのきもちとは","/about")
+        %li
+          = link_to("新規登録", "/signup") 
+        %li
+          = link_to("ログイン", "/login")
   = yield 
