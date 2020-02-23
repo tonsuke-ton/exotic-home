@@ -16,4 +16,21 @@
       </div>
     </div>
   </div>
-</div>
+  <h2 class="comment-menu">回答一覧</h2>
+<% @comments.each do |comment| %>
+  <div>
+    <a href="/users/<%= @post.user.id %>"><%= c.user.email %></a>
+    <%= c.content %>
+    <hr>
+  </div>
+<% end %>
+
+<%= form_tag("/posts/comment") do %>
+      <div class="form">
+        <div class="form-body">
+          <textarea name = "content"></textarea>
+          <input type="submit" value="回答する">
+        </div>
+      </div>
+    <% end %>
+

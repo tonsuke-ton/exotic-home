@@ -11,10 +11,11 @@ Rails.application.routes.draw do
   get "posts/:id/edit" => "posts#edit"
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
-  resources :tweets do
+  post "posts/comment" =>"posts#index"
+  resources :posts do
     resources :comments, only: :create
   end
-
+  
   get "/" => "home#top"
   get "about" => "home#about"
 end
