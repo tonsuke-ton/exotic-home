@@ -1,1 +1,0 @@
-https://gyazo.com/d68dc99de2c8b7ff5e6e8fd832bad35c
