@@ -1,0 +1,23 @@
+.about{
+  width: 1250px;
+  padding: 0 0 40px;
+  overflow: hidden;
+
+  &__side{
+    background-color: lightyellow;
+    float: right;
+    width: 300px;
+    &__title{
+      background-color: lightsalmon;
+      font-size: 20px;
+      margin-top: 80px;
+      
+    }
+}
+  &__main{
+    &__title{
+    font-size: 25px;
+    padding-top: 40px;
+  }
+}
+}
