@@ -1,23 +1,29 @@
 .about{
-  width: 1250px;
+  background-color: ghostwhite;
   padding: 0 0 40px;
   overflow: hidden;
 
   &__side{
-    background-color: lightyellow;
+    background-color: linen;
     float: right;
     width: 300px;
+    margin-right: 80px;
     &__title{
       background-color: lightsalmon;
       font-size: 20px;
       margin-top: 80px;
-      
     }
 }
   &__main{
+    float: left;
+    width: 800px;
+    padding: 60px;
+    margin-left: 80px;
+    background-color: lightcyan;
     &__title{
     font-size: 25px;
     padding-top: 40px;
+    
   }
 }
 }

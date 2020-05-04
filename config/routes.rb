@@ -12,8 +12,10 @@ Rails.application.routes.draw do
   post "posts/:id/update" => "posts#update"
   post "posts/:id/destroy" => "posts#destroy"
   post "posts/comment" =>"posts#index"
-  resources :posts do
-    resources :comments, only: :create
+  resources :comments, only:[:create,:update,:destroy] do
+    member do
+      get 'restore'
+    end
   end
   
   get "/" => "home#top"
